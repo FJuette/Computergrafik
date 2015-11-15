@@ -8,7 +8,7 @@ def gerade(xBeg, yBeg, xEnd, yEnd):
     debug(x, y, "", n);
 
     # Welche ist die schnelle Richtung?
-    if deltaX >= deltaY:
+    if abs(deltaX) >= abs(deltaY):
         # Entlang der X-Achse
         en = abs(deltaX) / 2 - abs(deltaY);
         while x != xEnd:
@@ -16,7 +16,7 @@ def gerade(xBeg, yBeg, xEnd, yEnd):
             x += sign(deltaX);
             if en < 0:
                 # Y-Punkt setzen
-                y += sign(deltaX);
+                y += sign(deltaY);
             debug(x, y, en * 2, n);
             # Entscheidungsvariable für den nächsten Punkt
             if en < 0:
@@ -54,4 +54,4 @@ def debug(x, y, en, n):
 
 
 if __name__ == '__main__':
-    gerade(111, -113, 201, 65);
+    gerade(321, -87, -227, 57);
